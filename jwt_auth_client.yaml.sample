@@ -1,0 +1,31 @@
+AUTH_ADMIN_PASSWORD: test
+TEMPLATE_FOLDER: templates
+disable_existing_loggers: false
+LOGGING_CONF:
+  version: 1
+  formatters:
+    standard: {(): !!python/name:pythonjsonlogger.jsonlogger.JsonFormatter '', fmt: '%(asctime)s
+        %(msecs)s                    %(levelname)s %(lineno)d %(funcName)s %(message)s                    %(filename)
+        %(module)s %(pathname)s %(relativeCreated)s                    %(process)d %(processName)s                    %(thread)s
+        %(threadName)s'}
+  handlers:
+    console: {class: logging.StreamHandler, formatter: standard, level: DEBUG}
+    info_file_handler: {backupCount: 10000, class: logging.handlers.TimedRotatingFileHandler,
+      encoding: utf8, filename: 'logs/jwt_auth_client.log',
+      formatter: standard, level: DEBUG, backupCount: 10, when: midnight, interval: 1}
+    error_file_handler: {backupCount: 10000, class: logging.handlers.TimedRotatingFileHandler,
+      encoding: utf8, filename: 'logs/jwt_auth_client_error.log',
+      formatter: standard, level: ERROR, backupCount: 10, when: midnight, interval: 1}
+  loggers:    
+      alembic:
+          handlers:
+          - console
+          level: DEBUG
+      '':
+          handlers:
+          - info_file_handler
+          level: DEBUG
+      'error':
+          handlers:
+          - error_file_handler
+          level: ERROR

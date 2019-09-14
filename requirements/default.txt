@@ -1,0 +1,9 @@
+Flask==1.0.2
+flask-restful==0.3.6
+flask-script==2.0.6
+python-dateutil==2.6.1
+python-json-logger==0.1.8
+pyyaml==3.12
+typing==3.6.4
+repoze.lru==0.7
+jwcrypto==0.4.2

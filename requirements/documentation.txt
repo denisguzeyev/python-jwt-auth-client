@@ -1,0 +1,2 @@
+sphinx-confluence
+confluence-publisher

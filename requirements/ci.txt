@@ -1,0 +1,4 @@
+tox
+cookiecutter
+-rdefault.txt
+-rpytest.txt

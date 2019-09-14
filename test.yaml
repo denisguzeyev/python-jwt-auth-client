@@ -1,0 +1,16 @@
+DEBUG: True
+DATABASE_URI: sqlite://
+SESSION_MAKER:
+    expire_on_commit: False
+    autocommit: False
+    autoflush: False
+
+alembic:
+    script_location: tests/alembic
+
+# For test runs, disable DEBUG stuff altogether
+LOGGING_CONF:
+  version: 1
+  loggers:
+      '':
+          level: INFO

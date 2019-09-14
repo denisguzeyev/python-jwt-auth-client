@@ -1,0 +1,13 @@
+pytest==3.0.5
+Faker==0.8.1
+httmock==1.2.6
+mock==2.0.0
+alembic==0.9.1
+factory-boy==2.9.2
+pytest-flask==0.10.0
+pytest-factoryboy==1.3.1
+pytest-mock==1.6.2
+pytest-coverage
+junit-xml==1.8
+paramiko==2.4.0
+jwcrypto==0.4.2

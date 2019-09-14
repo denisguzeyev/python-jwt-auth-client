@@ -1,0 +1,9 @@
+[run]
+omit = jwt_auth_client/exceptions.py
+		jwt_auth_client/bunch.py
+		jwt_auth_clietn/pattern_solution.py
+		jwt_auth_client/local_config.py
+		jwt_auth_client/config.py
+		jwt_auth_client/pattern_solution.py
+		jwt_auth_client/server_manager.py
+		jwt_auth_client/falsk_project.py
